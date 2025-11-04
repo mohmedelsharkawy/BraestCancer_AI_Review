@@ -25,6 +25,28 @@ This repository accompanies our systematic review on explainable AI (XAI) for **
 - **Modalities covered:** mammography, DBT, MRI, ultrasound, PET/CT, histopathology, clinical reports.
 - **Focus:** performance **and** explainability (saliency/attribution), dataset mapping, and clinical alignment.
 
+
+## 🌍 Global Impact
+
+Breast cancer remains a critical global health issue with rising incidence worldwide.
+
+<div align="center">
+
+### Projected Growth by Region (2022 → 2050)
+
+| Region | 2022 Cases | 2050 Projection | Growth Rate |
+|--------|------------|-----------------|-------------|
+| 🌏 **Asia** | ~1,000,000 | ~1,400,000 | ⬆️ **+40%** |
+| 🌍 **Africa** | ~200,000 | ~450,000 | ⬆️ **+125%** |
+| 🌎 **Latin America** | ~230,000 | ~350,000 | ⬆️ **+52%** |
+| 🌍 **Europe** | ~550,000 | ~600,000 | ⬆️ **+9%** |
+| 🌎 **North America** | ~300,000 | ~400,000 | ⬆️ **+33%** |
+
+</div>
+
+> 💡 **2022 Statistics**: 2.3 million new cases and ~670,000 deaths globally, accounting for nearly 7% of all cancer-related fatalities.
+
+---
 ---
 
 
