@@ -127,7 +127,207 @@ Breast cancer remains a critical global health issue with rising incidence world
 
 > See **Table 10** in the manuscript for a complete multi‑class matrix.
 
+### 📈 Binary Classification Performance
 
+#### Breast Density Assessment (Dense vs. Non-Dense)
+
+| Model | Accuracy | AUC | Sensitivity | Specificity | Year | Reference |
+|-------|----------|-----|-------------|-------------|------|-----------|
+| **Mohamed et al. CNN** | - | **0.9882** | - | - | 2018 | [[1]](#ref1) |
+| **Kate et al. InceptionV3** | **97.98%** | - | - | - | 2022 | [[2]](#ref2) |
+| **Lewin et al. CNN** | 97.4% | - | - | - | 2023 | [[3]](#ref3) |
+| **Xu et al. Residual** | 96.8% | - | - | - | 2018 | [[4]](#ref4) |
+| **Kriti et al. SVM** | 94.4% | - | - | - | 2015 | [[5]](#ref5) |
+| **Ciritsis et al. dCNN** | 99% MLO<br>96% CC | - | - | - | 2019 | [[6]](#ref6) |
+
+#### Cancer Detection (Benign vs. Malignant)
+
+| Model | Accuracy | AUC | Sensitivity | Specificity | Year | Reference |
+|-------|----------|-----|-------------|-------------|------|-----------|
+| **Mahmood et al. CNN+LSTM** | - | **0.99** | **99%** | - | 2024 | [[7]](#ref7) |
+| **Abdel et al. DBN+BPNN** | **99.68%** | - | - | - | 2016 | [[8]](#ref8) |
+| **Puttegowda et al. YOLOv3** | 98.8% | 0.99 | 97.2% | - | 2025 | [[9]](#ref9) |
+| **Suh et al. DenseNet-169** | - | 0.952 | 87% | 88% | 2020 | [[10]](#ref10) |
+| **Shimokawa et al. BilAD** | 84% | 0.90 | 73% | 93% | 2023 | [[11]](#ref11) |
+
+### 📊 Multi-Class BI-RADS Classification (A-D)
+
+| Model | Accuracy | AUC | Classes | Year | Reference |
+|-------|----------|-----|---------|------|-----------|
+| **Kate et al. InceptionV3+GSA** | **97.98%** | - | 4-class | 2022 | [[2]](#ref2) |
+| **Busaleh et al. TwoViewDensityNet** | 95.83% | **0.9951** | 4-class | 2022 | [[12]](#ref12) |
+| **Chen et al. InceptionV3** | 94.6% | 0.895-0.953 | 4-class | 2025 | [[13]](#ref13) |
+| **Deng et al. SE-Attention CNN** | 92.17% | - | 4-class | 2020 | [[14]](#ref14) |
+| **Xu et al. Residual Learning** | 92.6% | - | 4-class | 2018 | [[4]](#ref4) |
+| **Ciritsis et al. dCNN** | 90.9% MLO<br>90.1% CC | - | 4-class | 2019 | [[6]](#ref6) |
+| **Pawar et al. DenseNet** | 90.06% | 0.9625 | 4-class | 2022 | [[15]](#ref15) |
+
+### 🎯 Segmentation Performance
+
+| Model | Accuracy | Dice | Jaccard | Pearson's r | Year | Reference |
+|-------|----------|------|---------|-------------|------|-----------|
+| **Saffari et al. cGAN-UNet** | **98%** | **0.88** | 0.78 | - | 2020 | [[16]](#ref16) |
+| **Ahn et al. CNN** | - | - | - | **0.96** | 2017 | [[17]](#ref17) |
+| **Li et al. DCNN** | - | 0.79±0.13 | - | 0.97 (CV) | 2018 | [[18]](#ref18) |
+| **Lee et al. FCN** | - | - | - | 0.85 | 2018 | [[19]](#ref19) |
+
+---
+
+## 🤖 AI Framework
+
+Our review analyzes a comprehensive AI and XAI workflow for breast cancer analysis:
+
+### 🔄 Complete Pipeline
+```
+┌─────────────────────────────────────────┐
+│         INPUT LAYER                     │
+├─────────────────────────────────────────┤
+│ • Medical Imaging (Mammography, MRI)   │
+│ • Clinical Data (History, Demographics)│
+│ • Histopathology (Tissue samples)      │
+│ • Genomic Data (Gene expression)       │
+└────────────────┬────────────────────────┘
+                 │
+┌────────────────▼────────────────────────┐
+│      PREPROCESSING LAYER                │
+├─────────────────────────────────────────┤
+│ • Image: Normalization, Augmentation    │
+│ • Data: Missing value imputation        │
+│ • Feature: Texture analysis, Radiomics  │
+│ • Genomic: Quality control, filtering   │
+└────────────────┬────────────────────────┘
+                 │
+┌────────────────▼────────────────────────┐
+│   MULTIMODAL FEATURE INTEGRATION        │
+├─────────────────────────────────────────┤
+│ • Correlation Analysis                  │
+│ • Feature Selection                     │
+│ • Dimensionality Reduction (PCA, t-SNE) │
+└────────────────┬────────────────────────┘
+                 │
+┌────────────────▼────────────────────────┐
+│         AI MODELS LAYER                 │
+├─────────────────────────────────────────┤
+│ CNN:                                    │
+│  • ResNet, DenseNet, EfficientNet       │
+│ Ensemble:                               │
+│  • Random Forest, XGBoost               │
+│ Transformer:                            │
+│  • Vision Transformers, BERT            │
+│ Hybrid:                                 │
+│  • CNN-RNN, CNN-LSTM, Multimodal Fusion │
+└────────────────┬────────────────────────┘
+                 │
+┌────────────────▼────────────────────────┐
+│        XAI METHODS LAYER                │
+├─────────────────────────────────────────┤
+│ • LIME (Local explanations)             │
+│ • SHAP (Shapley values)                 │
+│ • Grad-CAM (Visual heatmaps)            │
+│ • Attention Mechanisms                  │
+└────────────────┬────────────────────────┘
+                 │
+┌────────────────▼────────────────────────┐
+│         OUTPUT LAYER                    │
+├─────────────────────────────────────────┤
+│ Predictions:                            │
+│  • Malignant/Benign classification      │
+│  • BI-RADS density categories           │
+│  • Risk scores, Survival estimates      │
+│ Explanations:                           │
+│  • Feature importance rankings          │
+│  • Visual heatmaps                      │
+│  • Decision rules                       │
+│ Clinical Support:                       │
+│  • Treatment recommendations            │
+│  • Prognostic assessments               │
+│  • Risk stratification                  │
+└─────────────────────────────────────────┘
+                 │
+┌────────────────▼────────────────────────┐
+│   CLINICAL DECISION SUPPORT SYSTEM      │
+├─────────────────────────────────────────┤
+│ • Interactive Dashboard                 │
+│ • Physician Interface                   │
+│ • Treatment Planning                    │
+│ • Patient Communication                 │
+│ • EHR Integration                       │
+└─────────────────────────────────────────┘
+```
+
+### 🧠 Popular Architectures Analyzed
+
+**Convolutional Neural Networks (CNNs):**
+- ResNet (18, 50, 152)
+- DenseNet (121, 169)
+- VGG (16, 19)
+- InceptionV3
+- EfficientNet (B0-B7)
+
+**Transformer-Based Models:**
+- Vision Transformers (ViT)
+- BERT-based architectures
+- MobileNet-v2 with ViT
+
+**Hybrid Approaches:**
+- CNN-LSTM combinations
+- CNN-SVM integration
+- Multi-stream networks
+- cGAN-UNet
+
+**Ensemble Methods:**
+- Random Forest
+- XGBoost
+- Voting classifiers
+- Multi-model ensembles
+
+---
+
+## 📈 Results
+
+### 📊 Publication Trends
+
+Our PRISMA-guided systematic review identified:
+
+<div align="center">
+
+| Metric | Count |
+|--------|-------|
+| **Initial Records** | 502 |
+| **Records Screened** | 480 |
+| **Full-Text Assessed** | 100 |
+| **Studies Included** | **47** |
+| **Time Period** | 2020-2025 |
+
+</div>
+
+### 📚 Top Publishers
+
+| Publisher | Studies | Percentage |
+|-----------|---------|------------|
+| **Elsevier** | 9 | 19.1% |
+| **MDPI** | 5 | 10.6% |
+| **Springer** | 4 | 8.5% |
+| **RSNA** | 3 | 6.4% |
+| **SPIE** | 3 | 6.4% |
+| **IEEE** | 3 | 6.4% |
+| **Others** | 20 | 42.6% |
+
+### 📅 Publication Year Distribution
+
+| Year | Studies | Key Highlights |
+|------|---------|----------------|
+| **2015** | 5 | Early ML approaches (SVM, PCA) |
+| **2016** | 3 | Deep Belief Networks emerge |
+| **2017** | 4 | Transfer learning adoption |
+| **2018** | 5 | CNN dominance begins |
+| **2019** | 4 | XAI methods integration |
+| **2020** | 2 | COVID-19 impact on publications |
+| **2021** | 1 | Virtual conferences era |
+| **2022** | 6 | **Peak year** - Multi-modal fusion |
+| **2023** | 4 | Transformer models |
+| **2024** | 5 | LLMs for radiology reports |
+| **2025** | 5 | Multimodal learning, Clinical validation |
 
 ---
 
