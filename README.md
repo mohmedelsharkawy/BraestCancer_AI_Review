@@ -142,6 +142,35 @@ This repository accompanies our systematic review on explainable AI (XAI) for **
 - DOI: [10.1038/s41598-025-95275-5](https://doi.org/10.1038/s41598-025-95275-5)
 - DOI: [10.1038/s41746-019-0214-6](https://doi.org/10.1038/s41746-019-0214-6)
 - DOI: [10.1088/1361-6560/aa9f87](https://doi.org/10.1088/1361-6560/aa9f87)
+
+## Research Gaps Identified
+
+- **External validity & domain shift:** Many studies report single‑site performance; few include multi‑vendor, multi‑site **external validation** or head‑to‑head clinical reader studies (density and diagnosis).  
+- **Patient‑level splits & leakage controls:** Several reports lack strict **patient‑level** partitioning across views/time, risking optimistic estimates—especially in small datasets.  
+- **Imbalance handling & calibration:** Class imbalance (e.g., BI‑RADS A/B vs. C/D; benign vs. malignant) is often mitigated with re‑sampling, but **probability calibration** and **decision‑threshold protocols** are under‑reported.  
+- **Explainability verification:** Saliency/prototype maps are shown qualitatively; **prospective human‑factors or counterfactual tests** validating that explanations improve safety/utility are rare.  
+- **Fairness & subgroup performance:** Limited analyses across **age, breast density, scanner/vendor, and ethnicity**; few report **subgroup CIs** or fairness metrics.  
+- **Ordinal structure underused:** For BI‑RADS density (A<B<C<D), many models ignore **ordinal constraints**, which can waste supervision and harm clinical consistency.  
+- **Multimodal fusion and reports:** Sparse integration of **mammography/DBT + US/MRI + clinical notes**; limited use of report‑mined labels and weak supervision.  
+- **Robustness & security:** Few stress tests for **adversarial noise**, compression, view mismatches, or **out‑of‑distribution** detection in screening workflows.  
+- **Benchmarking standards:** Heterogeneous **metrics, splits, and preprocessing** prevent apples‑to‑apples comparisons; public leaderboards for density are lacking.  
+- **Regulatory & deployment evidence:** Minimal **prospective trials**, workflow impact assessments, or post‑deployment monitoring (drift, alert fatigue, equity).  
+
+
+## Future Work & Recommendations
+
+- **Strong external validation:** Pre‑register **multi‑site** (≥3 vendors) studies with patient‑level splits and **external test sets**; report **CIs** via bootstrap and **calibration** (ECE, reliability curves).  
+- **Ordinal‑aware objectives:** For density, prefer **ordinal regression/losses** (e.g., CORAL/CMOL, isotonic calibration) or **hierarchical heads** that respect A<B<C<D.  
+- **Uncertainty & thresholding:** Report **well‑calibrated probabilities**, operating points tied to clinical **PPV/NPV** targets, and **abstention** (defer‑to‑human) policies.  
+- **Explainability that works:** Pair saliency/prototype methods with **sanity checks**, **region perturbation**, and **reader‑in‑the‑loop** studies measuring trust, time, and error reduction.  
+- **Fairness audits:** Stratify performance by **density, age, race/ethnicity, site/vendor**; publish subgroup CIs and mitigation plans when gaps appear.  
+- **Multimodal fusion:** Explore **DBT+US/MRI**, **imaging+EHR** fusion, and **report‑supervision**; evaluate cross‑modal consistency and failure modes.  
+- **Foundation & self‑supervised models:** Leverage large **SSL/foundation** encoders adapted to breast imaging; study **few‑shot** transfer and label‑efficient fine‑tuning.  
+- **Federated & privacy‑preserving learning:** Use **federated**, DP‑aware methods to unlock diverse sites while protecting PHI; benchmark against pooled‑data baselines.  
+- **Robustness testing:** Stress test against **compression, resolution, view order**, and synthetic artifacts; add **OOD detectors** in screening triage.  
+- **Open benchmarks:** Release **patient‑level** splits, preprocessing scripts, and **evaluation toolkits**; pursue public challenges for **binary** (dense vs non‑dense; cancer vs non‑cancer) and **multi‑class** (BI‑RADS A–D; lesion types).  
+- **Prospective trials & workflow impact:** Design **prospective** reader studies measuring sensitivity at matched specificity, time‑to‑decision, recall/biopsy rates, and downstream outcomes.  
+
 ## Repo Structure (suggested)
 
 ```
