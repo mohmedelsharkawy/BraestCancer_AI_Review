@@ -111,12 +111,37 @@ This repository accompanies our systematic review on explainable AI (XAI) for **
 
 ## Links to Papers (selection)
 
-> Full bibliographic details and DOIs are provided in our manuscript reference list (see Tables 7–10). A few example DOIs captured in our corpus:  
-- Diagnostics **12(7)**: [10.3390/diagnostics12071564](https://doi.org/10.3390/diagnostics12071564)  
-- Med. Phys.: [10.1002/mp.12763](https://doi.org/10.1002/mp.12763)  
-- 1361-6560 (Phys. Med. Biol.): [10.1088/1361-6560/aa9f87](https://doi.org/10.1088/1361-6560/aa9f87)
-
-
+> Full bibliographic details and DOIs are provided in our manuscript reference list (see Tables 7–10). Examples from our corpus:
+- DOI: [10.1002/jmri.29058](https://doi.org/10.1002/jmri.29058)
+- DOI: [10.1002/mp.12683](https://doi.org/10.1002/mp.12683)
+- DOI: [10.1002/mp.12763](https://doi.org/10.1002/mp.12763)
+- DOI: [10.1002/mp.14573](https://doi.org/10.1002/mp.14573)
+- DOI: [10.1007/978-3-319-21212-8_7](https://doi.org/10.1007/978-3-319-21212-8_7)
+- DOI: [10.1007/978-3-319-52277-7_13](https://doi.org/10.1007/978-3-319-52277-7_13)
+- DOI: [10.1007/s00330-017-5143-2](https://doi.org/10.1007/s00330-017-5143-2)
+- DOI: [10.1007/s00330-019-06357-1](https://doi.org/10.1007/s00330-019-06357-1)
+- DOI: [10.1007/s00330-020-06564-2](https://doi.org/10.1007/s00330-020-06564-2)
+- DOI: [10.1007/s00330-023-09474-7](https://doi.org/10.1007/s00330-023-09474-7)
+- DOI: [10.1007/s11548-018-1794-0](https://doi.org/10.1007/s11548-018-1794-0)
+- DOI: [10.1007/s12194-022-00686-y](https://doi.org/10.1007/s12194-022-00686-y)
+- DOI: [10.1007/s41870-022-00930-z](https://doi.org/10.1007/s41870-022-00930-z)
+- DOI: [10.1016/B978-0-323-95462-4](https://doi.org/10.1016/B978-0-323-95462-4)
+- DOI: [10.1016/j.bspc.2025.107607](https://doi.org/10.1016/j.bspc.2025.107607)
+- DOI: [10.1016/j.clinimag.2023.06.023](https://doi.org/10.1016/j.clinimag.2023.06.023)
+- DOI: [10.1016/j.cmpb.2020.105489](https://doi.org/10.1016/j.cmpb.2020.105489)
+- DOI: [10.1016/j.cmpb.2022.106885](https://doi.org/10.1016/j.cmpb.2022.106885)
+- DOI: [10.1016/j.compbiomed.2014.10.006](https://doi.org/10.1016/j.compbiomed.2014.10.006)
+- DOI: [10.1016/j.compmedimag.2016.07](https://doi.org/10.1016/j.compmedimag.2016.07)
+- DOI: [10.1016/j.eswa.2015.10.015](https://doi.org/10.1016/j.eswa.2015.10.015)
+- DOI: [10.1016/j.eswa.2024.123747](https://doi.org/10.1016/j.eswa.2024.123747)
+- DOI: [10.1016/j.glt.2025.04.007](https://doi.org/10.1016/j.glt.2025.04.007)
+- DOI: [10.1016/j.jmir.2021.10.004](https://doi.org/10.1016/j.jmir.2021.10.004)
+- DOI: [10.1016/j.lana.2025.101096](https://doi.org/10.1016/j.lana.2025.101096)
+- DOI: [10.1038/s41467-020-17410-5](https://doi.org/10.1038/s41467-020-17410-5)
+- DOI: [10.1038/s41598-018-19369-6](https://doi.org/10.1038/s41598-018-19369-6)
+- DOI: [10.1038/s41598-025-95275-5](https://doi.org/10.1038/s41598-025-95275-5)
+- DOI: [10.1038/s41746-019-0214-6](https://doi.org/10.1038/s41746-019-0214-6)
+- DOI: [10.1088/1361-6560/aa9f87](https://doi.org/10.1088/1361-6560/aa9f87)
 ## Repo Structure (suggested)
 
 ```
